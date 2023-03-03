@@ -25,7 +25,7 @@ public class AddressBookMain {
             int phoneno = sc.nextInt();
             System.out.println("Enter " + (i + 1) + " Person email:");
             String email = sc.next();
-            Contact contact = new Contact(firstname, lastname, address, state, zip, phoneno, email);
+            Contact c = new Contact(firstname, lastname, address, state, zip, phoneno, email);
             array[i] = contact;
         }
 
