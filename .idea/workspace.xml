@@ -12,7 +12,6 @@
       <change afterPath="$PROJECT_DIR$/Addressbook System.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/bridgelabz/AddressBookMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/bridgelabz/AddressBookMain.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/bridgelabz/Contact.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/bridgelabz/Contact.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,6 +30,9 @@
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="ProjectErrors" />
   </component>
   <component name="ProjectId" id="2MUhSxVW8lilDUyy8L78c7CintN" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />

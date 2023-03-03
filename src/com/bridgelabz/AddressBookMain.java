@@ -14,8 +14,8 @@ public class AddressBookMain {
         Contact[] array = new Contact[person];
         int result = 0;
         while (result != 4) {
-            System.out.println("What to perform");
-            System.out.println("1.Add 2.Edit 3.Print 4.Stop");
+            System.out.println("What to do you want ?");
+            System.out.println("1.Add ,\n 2.Edit,\n 3.Delete, \n 4.Print,\n 5.Stop");
             result = sc.nextInt();
             switch (result) {
                 case 1:
@@ -25,6 +25,9 @@ public class AddressBookMain {
                     Edit(person, array);
                     break;
                 case 3:
+                    Delete(person,array);
+                    break;
+                case 4:
                     Print(person, array);
                     break;
                 default:
@@ -135,7 +138,23 @@ public class AddressBookMain {
             }
         }
     }
-
+    public static void Delete(int person, Contact[] array) {
+        System.out.println("Enter the name you want to delete : ");
+        String del = sc.next();
+        System.out.println("Address book is now for : " + (person - 1) + " person");
+        for (int i = 0; i < person; i++) {
+            if (del.equals(array[i].getFirstname())) {
+                for (int j = i; j < person - 1; j++) {
+                    array[j] = array[j + 1];
+                }
+            }
+        }
+        for (int i = 0; i < person - 1; i++) {
+            System.out.println(array[i].getFirstname() + " " + array[i].getLastname() + " " + array[i].getAddress() + " "
+                    + array[i].getCity() + " " + array[i].getState() + " " + array[i].getZip() + " " + array[i].getPhoneno() + " " + array[i].getEmail());
+        }
+        System.out.println("--------------------------------------------");
+    }
     public static void Print(int person, Contact[] array) {
         for (int i = 0; i < person; i++)
             System.out.println(array[i].getFirstname() + " " + array[i].getLastname() + " " + array[i].getAddress() + " "
