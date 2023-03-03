@@ -1,27 +1,39 @@
 package com.bridgelabz;
 
+import java.util.Scanner;
+
 public class AddressBookMain {
     public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
         System.out.println("Welcome to Address Book Program");
 
-        Contact c = new Contact();
+        System.out.println("Enter number of persons :");
+        int person = sc.nextInt();
+        Contact[] array = new Contact[person];
+        for (int i = 0; i < person; i++) {
+            System.out.println("Enter " + (i + 1) + " Person name-");
+            String firstname = sc.next();
+            System.out.println("Enter " + (i + 1) + " Person lastname:");
+            String lastname = sc.next();
+            System.out.println("Enter " + (i + 1) + " Person address:");
+            String address = sc.next();
+            System.out.println("Enter " + (i + 1) + " Person state:");
+            String state = sc.next();
+            System.out.println("Enter " + (i + 1) + " Person zip code:");
+            int zip = sc.nextInt();
+            System.out.println("Enter " + (i + 1) + " Person contact:");
+            int phoneno = sc.nextInt();
+            System.out.println("Enter " + (i + 1) + " Person email:");
+            String email = sc.next();
+            Contact contact = new Contact(firstname, lastname, address, state, zip, phoneno, email);
+            array[i] = contact;
+        }
 
-        c.firstname = "Debabrata";
-        c.lastname = "Sahoo";
-        c.address = "Koel Nagar";
-        c.city = "Rourkela";
-        c.state = "Odisha";
-        c.email = "debabratas@xyz.com";
-        c.zip = 751025;
-        c.phoneno = 7978;
-
-        System.out.println(c.firstname);
-        System.out.println(c.lastname);
-        System.out.println(c.address);
-        System.out.println(c.city);
-        System.out.println(c.state);
-        System.out.println(c.email);
-        System.out.println(c.zip);
-        System.out.println(c.phoneno);
+        for (
+                int i = 0;
+                i < person; i++) {
+            System.out.println(array[i].firstname + " " + array[i].lastname + " " + array[i].address + " "
+                    + array[i].state + " " + array[i].zip + " " + array[i].phoneno + " " + array[i].email);
+        }
     }
 }
