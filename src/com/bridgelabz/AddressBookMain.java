@@ -144,7 +144,7 @@ public class AddressBookMain {
         System.out.println("Address book is now for : " + (person - 1) + " person");
         for (int i = 0; i < person; i++) {
             if (del.equals(array[i].getFirstname())) {
-                for (int j = i; j < person - 1; j--) {
+                for (int j = i; j < person - 1; j++) {
                     array[j] = array[j + 1];
                 }
             }
